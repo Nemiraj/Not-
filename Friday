@@ -1,0 +1,353 @@
+<!-- Created by tony santos 007 -->
+
+<!-- Created by Arda Kederoglu-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chatbot</title>
+        <style>
+            
+body {
+    font-family: arial;
+}
+
+.box {
+  width: 40%;
+  margin: 20px auto;
+  margin-left: 5%;
+  margin-bottom: 10%;
+  border-radius: 15px;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: arial;
+  position: relative;
+  z-index: -1;
+}
+
+.sb1{
+    margin-left: 45%;
+    background: #4286f4;
+}
+
+.sb1:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 15px solid #4286f4;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #4286f4;
+  border-bottom: 15px solid transparent;
+  right: -16px;
+  top: 0;
+}
+
+.sb2{
+     background: #eee;
+     color: #000;
+     margin-right: 50%;
+}
+
+.sb2:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid #eee;
+  border-top: 15px solid #eee;
+  border-bottom: 15px solid transparent;
+  left: -16px;
+  top: 0;
+}
+
+.input-container {
+    position: fixed;
+    height: 8%;
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    bottom: 1%;
+}
+
+.input-field {
+    width: 80%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #eee;
+    border-radius: 50px;
+}
+
+.input-field:focus {
+    border: 3px solid #4286f4;
+}
+
+.send-btn{
+    margin-left: 2%;
+    width: 15%;
+    background: #4286f4;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+}
+        </style>
+    </head>
+    <body>
+        <h1 align="center">Chatbot</h1>
+        <div class="box sb2">Hello, I am Friday.😃</div>
+          <div class="input-container">
+            <input id="message" class="input-field" type="text" placeholder="Write something..." required/>
+            <button onclick="send()" class="send-btn">Send</button>
+        </div>
+        <script>
+            
+alert('If you have questions Chatbot can not answer. Then write your ideas in the comments below.');
+
+function send(){
+    var scroll = setInterval(function(){window.scrollBy(0, 1000)}, 0);
+    var message = document.getElementById('message').value;  
+    if(document.getElementById('message').value === ''){
+    }else{
+    var sb = document.createElement("div");
+    var m = document.createTextNode(message);
+    var c = document.createAttribute("class");
+    c.value = "box sb1";
+    sb.setAttributeNode(c);
+    sb.appendChild(m);
+    document.body.appendChild(sb);
+    answer();}
+}
+
+function answer(){
+    var end = message;
+    var message = document.getElementById('message').value;
+    var chat = message.substring(0, end);
+
+    document.getElementById('message').value = '';
+    
+    switch(chat){
+        case "Hi":
+        case "hi":
+        case "Hello":
+        case "hello":
+        case "hello Chatbot":
+        case "hello chatbot":
+        case "Hello Chatbot":
+        case "Hello chatbot":
+        case "Hi!":
+        case "hi!":
+        case "Hello!":
+        case "hello!":
+        case "hello Chatbot!":
+        case "hello chatbot!":
+        case "Hello Chatbot!":
+        case "Hello chatbot!":    
+            var ans = "What can I do?";
+        break;
+        
+        case "Good morning!":
+        case "good morning!":
+        case "Good Morning!":
+        case "good Morning!":
+        case "Good morning":
+        case "good morning":
+        case "Good Morning":
+        case "good Morning": 
+            var ans = "Good Morning ☀️";
+        break;
+        
+        case "Good afternoon!":
+        case "good afternoon!":
+        case "Good Afternoon!":
+        case "good Afternoon!":
+        case "Good afternoon":
+        case "good afternoon":
+        case "Good Afternoon":
+        case "good Afternoon": 
+            var ans = "Good Afternoon 🌙";
+        break;
+        
+        case "Good Night!":
+        case "Good night!":
+        case "Good night!":
+        case "good Night!":
+        case "Good night":
+        case "good night":
+        case "Good Night":
+        case "good Night": 
+            var ans = "Good Night 🕔";
+        break;
+        
+        case "How old are you?":
+        case "how old are you?":
+        case "how old are you":
+        case "How old are you":
+            var ans = "I was born 25th November 2000.";
+        break;
+        
+        case "How are you?":
+        case "how are you?":
+        case "how are you":
+        case "How are you":
+            var ans = "I'm fine. Thank you and you?";
+        break;
+        
+        case "I am fine":
+        case "I am fine!":
+        case "I am fine.": 
+        case "I'm fine":
+        case "I'm fine!":
+        case "I'm fine.":     
+        case "I'm fine too.":
+        case "I'm fine.":
+        case "I am also fine.":
+        case "I am fine too!":
+        case "I'm fine too!":
+        case "I'm fine!":
+        case "I am also fine!":
+        case "I am fine too":
+        case "I'm fine too":
+        case "I'm fine":
+        case "I am also fine":    
+            var ans = "Cool.";
+        break;
+        
+        case "Tell a joke.":
+        case "Tell me a joke.":
+        case "Tell a joke!":
+        case "Tell me a joke!":
+        case "Tell a joke":
+        case "Tell me a joke":
+        case "tell a joke.":
+        case "tell me a joke.":
+        case "tell a joke!":
+        case "tell me a joke!":
+        case "tell a joke":
+        case "tell me a joke":
+            var ans = 'Patient: "Doctor I am scared. This is my first operation!" Doctor: "Don\'t worry! Mine too."';
+        break;
+        
+        case "Bye":
+        case "bye":
+        case "Bye!":
+        case "bye!":    
+        case "Bye Bye":
+        case "bye bye":
+        case "Bye bye":
+        case "Good bye!":
+        case "Good bye":    
+        case "Good Bye!":
+        case "good bye!":
+        case "good bye":
+        case "good bye.":
+        case "Good Bye!":
+        case "Nothing!":
+        case "nothing!":
+        case "Nothing":
+        case "nothing":    
+            var ans = 'OK, bye! But wait. I have only one question: Do you give this project an upvote? Yes or no?';
+        break;
+        
+        case "What time is it?":
+        case "what time is it?":
+        case "what time is it":
+        case "What time is it":
+        case "What is the time?":
+        case "what is the time?":
+        case "What is the time":
+        case "what is the time":    
+        case "What's the time?":
+        case "what's the time?":
+        case "What's the time":
+        case "what's the time":
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            var ans = h + ":" + m + ":" + s;
+        break;
+        
+        case "What date is it?":
+        case "what date is it?":
+        case "what date is it":
+        case "What date is it":
+        case "What is the date?":
+        case "what is the date?":
+        case "What is the date":
+        case "what is the date":    
+        case "What's the date?":
+        case "what's the date?":
+        case "What's the date":
+        case "what's the date":
+            var today = new Date();
+            var day = today.getDay();
+            var d = today.getDate();
+            var mo = today.getMonth()+1;
+            var y = today.getFullYear();
+            m = checkTime(m);
+            s = checkTime(s);
+            
+            switch (new Date().getDay()){
+            case 0:
+                day = "Sun";
+                break;
+            case 1:
+                day = "Mon";
+                break;
+            case 2:
+                day = "Tue";
+                break;
+            case 3:
+                day = "Wed";
+                break;
+            case 4:
+                day = "Thu";
+                break;
+            case 5:
+                day = "Fri";
+                break;
+            case 6:
+                day = "Sat";
+                break;
+           }
+           
+           var ans = day + ", " + d + "." + mo + "." + y;
+        break;
+        
+        case "Yes!":
+        case "yes!":
+        case "Yes":
+        case "yes":    
+            var ans = 'Thank you very much! 😃';
+        break;
+        
+        case "No!":
+        case "no!":
+        case "No":
+        case "no":    
+            var ans = 'Ok, than write please in the comments below, why not.';
+        break;
+        
+        default: var ans = "Sorry, I haven't got an answer for that. 🙁";
+        break;
+    }
+    var sb = document.createElement("div");
+    var a = document.createTextNode(ans);
+    var c = document.createAttribute("class");
+    c.value = "box sb2";
+    sb.setAttributeNode(c);
+    sb.appendChild(a);
+    document.body.appendChild(sb);
+}
+    
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i}
+        return i;
+    }
+        </script>
+    </body>
+</html>
